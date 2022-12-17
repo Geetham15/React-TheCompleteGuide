@@ -1,7 +1,10 @@
 //Spread => Used to split up array elements OR object properties
-
-//const newArray = [...oldArray, 1, 2]
-//const newObject = { ...oldObject, newProp:5 }
+const oldArray = [1,2,3]
+const newArray = [...oldArray, 4, 5] // [1,2,3,4,5]
+const oldObject = {
+    name: 'Max'
+}
+const newObject = { ...oldObject, newProp:5 }
 
 //Rest => Used to merge a list of function arguments into an array
 
