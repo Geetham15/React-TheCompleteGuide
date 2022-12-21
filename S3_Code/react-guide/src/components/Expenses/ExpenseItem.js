@@ -5,10 +5,10 @@ import Card from '../UI/Card';
 
 const ExpenseItem =(props) =>{
   const [title, setTitle ] = useState(props.title)
-  
+  console.log('Expense Item evaluated by React')
 
     const clickHandler = () => {
-      setTitle('Updated!')
+      //setTitle('Updated!')
       console.log(title) //old value is logged
     }
 
