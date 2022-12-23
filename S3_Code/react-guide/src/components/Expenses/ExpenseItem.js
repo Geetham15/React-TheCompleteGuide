@@ -4,24 +4,19 @@ import ExpenseDate from './ExpenseDate'
 import Card from '../UI/Card';
 
 const ExpenseItem = (props) =>{
-  const [title, setTitle ] = useState(props.title)
-  console.log('Expense Item evaluated by React')
-
-    const clickHandler = () => {
-      //setTitle('Updated!')
-      console.log(title) //old value is logged
-    }
-
+ // const [title, setTitle ] = useState(props.title)
+ // console.log('Expense Item evaluated by React') 
   return (
     
     <Card className='expense-item'>
       {/* <div>{props.date.toISOString()}</div> */}
       <ExpenseDate date={props.date}/>
       <div className='expense-item__description'>
-        <h2>{title}</h2>
+        {/* <h2>{title}</h2> */}
+         <h2>{props.title}</h2> {/*Stateless component or also called presentational or dump component*/}
         <div className='expense-item__price'>${props.amount}</div>
       </div>
-      <button onClick={clickHandler}>Change Title</button>
+      
     </Card>
   );
 }
