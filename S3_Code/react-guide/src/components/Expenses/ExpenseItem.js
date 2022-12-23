@@ -3,7 +3,7 @@ import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate'
 import Card from '../UI/Card';
 
-const ExpenseItem =(props) =>{
+const ExpenseItem = (props) =>{
   const [title, setTitle ] = useState(props.title)
   console.log('Expense Item evaluated by React')
 
