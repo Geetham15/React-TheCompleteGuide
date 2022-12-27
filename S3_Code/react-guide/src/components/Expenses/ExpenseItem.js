@@ -7,7 +7,7 @@ const ExpenseItem = (props) =>{
  // const [title, setTitle ] = useState(props.title)
  // console.log('Expense Item evaluated by React') 
   return (
-    
+    <li>
     <Card className='expense-item'>
       {/* <div>{props.date.toISOString()}</div> */}
       <ExpenseDate date={props.date}/>
@@ -18,6 +18,7 @@ const ExpenseItem = (props) =>{
       </div>
       
     </Card>
+    </li>
   );
 }
 export default ExpenseItem;
