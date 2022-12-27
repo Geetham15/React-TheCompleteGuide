@@ -48,7 +48,7 @@ import Expenses from './components/Expenses/Expenses';
   // );
   return (
     <div>
-      <NewExpense onAddExpense = { addExpenseHandler } />
+      <NewExpense onAddExpense = { addExpenseHandler } />    
       <Expenses items={expenses}></Expenses>
     </div>
   );
