@@ -33,13 +33,12 @@ import Expenses from './components/Expenses/Expenses';
 
   const App = () => {
     const [expenses, setExpenses] = useState(DUMMY_EXPENSES)
+    
     const addExpenseHandler = expense => {
       console.log('In App.js')
-      //console.log(expense)
-    // setExpenses([expense, ...expenses])
-      setExpenses(prevExpenses => {
+      setExpenses((prevExpenses) => {
         return [expense, ...prevExpenses]
-    })
+      })
     }
   // return React.createElement(
   //   'div', 
@@ -49,8 +48,7 @@ import Expenses from './components/Expenses/Expenses';
   // );
   return (
     <div>
-      {/* <h2>Let's get started!</h2> */}
-      <NewExpense onAddExpense = { addExpenseHandler }/>
+      <NewExpense onAddExpense = { addExpenseHandler } />
       <Expenses items={expenses}></Expenses>
     </div>
   );
