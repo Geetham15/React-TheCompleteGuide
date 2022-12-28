@@ -55,13 +55,14 @@ function App() {
   }
   return (
     <div >
-      <section>
+      <AddUser />
+      {/* <section>
         <AddUser />
         <UserForm onAddUser={addUserHandler}/>
       </section>
       <section>
         {content}
-      </section>
+      </section> */}
     </div>
   );
 }
