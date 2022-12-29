@@ -6,10 +6,10 @@ import Wrapper from '../Helpers/Wrapper'
 import classes from './AddUser.module.css'
 
 const AddUser = (props) => {
-    const nameInputRef = useRef();
-    const ageInputRef = useRef();
+    const nameInputRef = useRef(); //Ref are uncontrolled input components
+    const ageInputRef = useRef(); //native DOM elements
 
-    // const [ enteredUsername, setEnteredUsername]  = useState('')
+    // const [ enteredUsername, setEnteredUsername]  = useState('') //controlled by React
     // const [ enteredAge, setEnteredAge]  = useState('')
     const [ error, setError ] = useState();
 
@@ -33,7 +33,7 @@ const AddUser = (props) => {
         }
         props.onAddUser(enteredUsername, enteredAge)
         console.log(enteredUsername, enteredAge)
-        nameInputRef.current.value = ''
+        nameInputRef.current.value = '' //native DOM Element
         ageInputRef.current.value = ''
         // setEnteredUsername('')
         // setEnteredAge('')
