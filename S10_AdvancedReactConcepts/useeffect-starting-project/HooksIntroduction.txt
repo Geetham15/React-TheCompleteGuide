@@ -1,0 +1,19 @@
+useReducer
+----------
+Sometimes, you have a more compled state- for example if it got multiple states,
+multiple ways of changing it or dependencies to other states.
+ useState() thenoften becomes hard or error prone to use
+ useReducer() can be used as a replacement for useState() if you need "more powerful state management"
+
+Understanding useReducer()
+--------------------------
+const [state, dispatchFn] = useReducer(reducerFn, initialState, initFn)
+
+state -> The state snapshot used in the component re-render/re-evaluation cycle
+dispatchFn -> A function that can be used to dispatch a new action (i.e trigger an update of the state)
+reducerFn -> (prevStae, action) => newState
+    A function that is triggered automatically once an action is dispatched (via dispatchFn())
+     it receives the latest state snapshot and should return the new, updated state.
+initialState -> The initial state
+initFn -> A function to set the initial state programmatically.
+
