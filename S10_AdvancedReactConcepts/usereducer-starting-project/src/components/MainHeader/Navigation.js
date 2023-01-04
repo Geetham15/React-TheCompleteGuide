@@ -6,8 +6,6 @@ import classes from './Navigation.module.css';
 const Navigation = () => {
   const ctx = useContext(AuthContext)
   return (
-    // <AuthContext.Consumer>
-    //   {(ctx) => {
         <nav className={classes.nav}>
           <ul>
             {ctx.isLoggedIn && (
@@ -27,8 +25,6 @@ const Navigation = () => {
             )}
           </ul>
         </nav>
-    // }}
-    // </AuthContext.Consumer>
   );
 };
 
