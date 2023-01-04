@@ -30,3 +30,21 @@ useReducer()
 1. Great if you need more power
 2. Should be considered if you have related pieces of state/data 
 3. Can be helpful if you have more complex state updates
+
+Context Limitations
+-------------------
+React Context is NOT optimized for high frequency changes!
+React Context also shouldn't be used to replace ALL component 
+    communications and props
+
+Rules of Hooks
+---------------
+Only call React Hooks in React functions
+    1. React Compopnent functions
+    2. Custom Hooks
+Only call React Hooks at the Top Level
+    1. Don't call them in nested functions
+    2. Don't call them in any block statements
++ extra, unofficial Rule for useEffect() : ALWAYS add everything you refer
+    to inside of useEffect() as a dependency!
+        
