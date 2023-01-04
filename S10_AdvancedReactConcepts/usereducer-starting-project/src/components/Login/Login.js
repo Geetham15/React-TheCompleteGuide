@@ -49,7 +49,7 @@ const Login = (props) => {
     };
   }, []);
 
-  const { isValid: emailIsValid } = emailState;       // alias assignment
+  const { isValid: emailIsValid } = emailState;       // alais assignment
   const { isValid: passwordIsValid} = passwordState;  // alais assignment
  
   useEffect(() => {
@@ -62,7 +62,7 @@ const Login = (props) => {
 
     return () => {
       console.log('CLEANUP');
-      
+
       clearTimeout(identifier);
     };
   }, [emailIsValid, passwordIsValid]);
